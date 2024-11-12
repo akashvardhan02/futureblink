@@ -1,5 +1,5 @@
 
-# MERN Email Sequence Manager
+# MERN Email Sequence Manager ---Future Blink
 
 The MERN Email Sequence Manager is a web application designed to allow users to design and implement email marketing sequences using a visual flowchart interface. It utilizes the MERN stack, which includes MongoDB, Express.js, React, and Node.js, for both the frontend and backend development. The application provides users with an intuitive interface to create, edit, and visualize email marketing sequences as flowcharts, along with backend services to manage sequence data efficiently.
 
@@ -83,7 +83,5 @@ To run this project, you will need to create a .env file in the backend folder o
 5) Open your browser and visit http://localhost:5173 to view the project app locally.
 
 
-## Deployment
 
-The  website is deployed on https://email-marketing-futureblink.onrender.com/.  Please visit the link to explore the live version of the website.
 

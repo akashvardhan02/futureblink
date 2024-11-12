@@ -1,6 +1,7 @@
 import axios from "axios";
 
-const BASE_URL = !import.meta.env.PROD ? "http://localhost:3000/api/auth" : "/api/auth";
+const BASE_URL = import.meta.env.VITE_BACKEND_URL || "/api/auth";
+
 
 
 // for new user registration

@@ -1,6 +1,6 @@
 import axios from "axios";
 
-const BASE_URL = !import.meta.env.PROD ? "http://localhost:3000/api/emailsequence" : "/api/emailsequence";
+const BASE_URL = import.meta.env.VITE_BACKEND_URL || "/api/emailsequence";
 
 export const getAllEmailSequence = async () => {
     try {

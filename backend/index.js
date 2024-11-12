@@ -65,4 +65,10 @@ app.use((err, req, res, next) => {
 
 console.log('Server initialization complete');
 
+// Add this to start the server on the specified port
+const PORT = process.env.PORT || 3000;
+app.listen(PORT, () => {
+    console.log(`Server running on port ${PORT}`);
+});
+
 export default app;

@@ -1,0 +1,31 @@
+# render.yaml
+
+services:
+  # Backend Service
+  - type: web
+    name: future-blink-backend
+    env: node
+    plan: free
+    buildCommand: "cd backend && npm install"
+    startCommand: "cd backend && npm run dev"
+    envVars:
+      - key: PORT
+        value: 3000
+      - key: MONGODB_URL
+        fromSecret: mongodb_url
+      - key: JWT_SECRET
+        fromSecret: jwt_secret
+      - key: NODE_ENV
+        value: production
+
+  # Frontend Service
+  - type: web
+    name: future-blink-frontend
+    env: node
+    plan: free
+    buildCommand: "cd frontend && npm install && npm run build"
+    startCommand: "cd frontend && npm start"
+    staticPublishPath: frontend/dist
+    envVars:
+      - key: VITE_BACKEND_URL
+        value: "https://future-blink-backend.onrender.com"
